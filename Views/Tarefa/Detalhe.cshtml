@@ -1,0 +1,33 @@
+@model TrilhaApiDesafio.Models.Tarefa
+<ul>
+        <li class="list-group-item d-flex flex-column flex-sm-row"> 
+            <div class="container d-flex flex-wrap align-self-center">
+                <p class="col-sm">
+                    <b>Nome: </b>@Html.DisplayFor(model => model.Titulo)
+                </p>
+                <p class="col-sm-5">
+                    <b>Descrição: </b>@Html.DisplayFor(model => model.Descricao)
+                </p>
+                <p class="col-sm">
+                    <b>Data: </b>@Html.DisplayFor(model => model.Data)
+                </p>
+                <p class="col-sm">
+                    <b>Status: </b>@Html.DisplayFor(model => model.Status)
+                </p>
+            </div>
+            <div>
+                <form asp-action="AlterarStatus" asp-route-id="@Model.Id" class="btn-group-vertical btn-group-sm align-self-center d-none d-sm-block">
+                    <input type="submit" value="AlterarStatus" class="btn btn-primary">
+                    <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-success">Editar</a>
+                    <a asp-action="Deletar" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
+                </form>
+            </div>
+            <div>
+                <form asp-action="AlterarStatus" asp-route-id="@Model.Id" class="btn-group btn-group-sm align-self-center d-block d-sm-none">
+                    <input type="submit" value="AlterarStatus" class="btn btn-primary">
+                    <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-success">Editar</a>
+                    <a asp-action="Deletar" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
+                </form>
+            </div>
+        </li>
+    </ul>

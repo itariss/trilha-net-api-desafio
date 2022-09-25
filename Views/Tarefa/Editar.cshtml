@@ -1,0 +1,23 @@
+@model TrilhaApiDesafio.Models.Tarefa
+
+<div class="m-auto">
+        <form asp-action="Editar">
+            <div class="d-flex justify-content">
+                <div class="input-group">
+                    <label asp-for="Titulo" class="input-group-text"></label>
+                    <input asp-for="Titulo" type="text" class="form-control ">
+                </div>
+                <div class="input-group">
+                    <label asp-for="Descricao" class="input-group-text"></label>
+                    <input asp-for="Descricao" type="text" class="form-control">
+                </div>
+                <div class="input-group">
+                    <label asp-for="Data" class="input-group-text"></label>
+                    <input asp-for="Data" type="datetime-local" class="form-control">
+                </div>
+                <div class="input-group ml-auto">
+                    <input type="submit" value="Editar" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+</div>

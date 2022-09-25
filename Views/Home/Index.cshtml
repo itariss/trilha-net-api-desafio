@@ -1,0 +1,15 @@
+﻿@model IEnumerable<TrilhaApiDesafio.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="d-flex m-auto flex-column col-sm-3 btn-group-vertical " role="group">
+    <a asp-controller="Tarefa" asp-action="Index" class="btn btn-info p-4">Listar Tarefas</a>
+    <a asp-controller="Tarefa" asp-action="Criar" class="btn btn-success p-4">Adicionar Tarefa</a>
+    <a asp-controller="Tarefa" asp-action="Buscar" class="btn btn-secondary p-4">Buscar Tarefas</a>
+</div>

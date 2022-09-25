@@ -1,0 +1,11 @@
+@model TrilhaApiDesafio.Models.Tarefa
+
+<div class="container col-sm-6">
+    <form asp-action="TarefaPorData" class="input-group">
+        <label class="input-group-text">Data</label>
+        <input asp-for="Data"  type="date" class="form-control">
+        <div class="input-group-prepend">
+            <input  type="submit" class="btn btn-outline-primary" value="Buscar"/>
+        </div>
+    </form>
+</div>

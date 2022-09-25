@@ -1,0 +1,14 @@
+@model TrilhaApiDesafio.Models.Tarefa
+
+<div class="container col-sm-6">
+    <form asp-action="TarefaPorStatus" class="input-group">
+        <label class="input-group-text">Status</label>
+        <select asp-for="Status"  type="date" class="form-control">
+            <option value="Pendente">Pendente</option>
+            <option value="Finalizado">Finalizado</option>
+        </select>
+        <div class="input-group-prepend">
+            <input  type="submit" class="btn btn-outline-primary" value="Buscar"/>
+        </div>
+    </form>
+</div>

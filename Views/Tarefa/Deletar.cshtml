@@ -1,0 +1,24 @@
+@model TrilhaApiDesafio.Models.Tarefa
+
+<div class="container">
+    <h4 class="text-danger">Deseja realmente deletar esta tarefa?</h4>
+    <ul class="list-group">
+        <li class="list-group-item d-flex align-items-end"> 
+            <p class="col-sm-2">
+                <b>Nome: </b>@Html.DisplayFor(model => model.Titulo)
+            </p>
+            <p class="col-sm">
+                <b>Descrição: </b>@Html.DisplayFor(model => model.Descricao)
+            </p>
+            <p class="col-sm-3">
+                <b>Data: </b>@Html.DisplayFor(model => model.Data)
+            </p>
+            <p class="col-sm-2">
+                <b>Status: </b>@Html.DisplayFor(model => model.Status)
+            </p>
+            <form asp-action="Deletar" class="btn-group col-sm-2 align-self-center">
+                <input type="submit" value="Deletar" class="btn btn-danger">
+            </form>
+        </li>
+    </ul>
+</div>
