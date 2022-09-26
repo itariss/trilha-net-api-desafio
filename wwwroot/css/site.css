@@ -19,3 +19,7 @@ html {
 body {
 	margin-bottom: 60px;
 }
+
+.line-through {
+	text-decoration: line-through;
+}
